@@ -1,10 +1,14 @@
-let outcomes = 3;
-let funding = 10;
+// Feel free to play with these global variables to see how liquidity sensitivity changes pending initial funding 
+const outcomes = 3;
+const funding = 10;
 
+// Set initial state $1 == 1 share in each outcome
 let outcomesToInventory = [];
 for (var i = 0; i < outcomes; i++) {
 	outcomesToInventory.push(funding);
 }
+
+// Expected invariant is the product of all token balances
 let expectedInvariant = productOfArr(outcomesToInventory);
 
 function productOfArr(arr) {
@@ -22,7 +26,6 @@ function getInverseOutcomes(outcome) {
 }
 
 function getOddsWeightForOutcome(outcome) {
-
 	let inverseOutcomes = getInverseOutcomes(outcome)
 
 	return inverseOutcomes.reduce((product, val) => {
