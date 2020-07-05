@@ -1,9 +1,9 @@
-let outcomes = 2;
-let f = 100000;
+let outcomes = 3;
+let funding = 10;
 
 let outcomesToInventory = [];
 for (var i = 0; i < outcomes; i++) {
-	outcomesToInventory.push(f);
+	outcomesToInventory.push(funding);
 }
 let expectedInvariant = productOfArr(outcomesToInventory);
 
@@ -69,6 +69,7 @@ logState();
 // helpers: 
 function logState() {
 	console.log("invariant ", calcInvariant());
-	console.log("price no: ", calcPrice(0));
-	console.log("price yes: ", calcPrice(1));
+	for (var i = 0; i < outcomes; i++) {
+		console.log("price for share in outcome " + i + " $" + calcPrice(i));
+	}
 }
