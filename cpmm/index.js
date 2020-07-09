@@ -2,6 +2,19 @@
 const outcomes = 3;
 const funding = 10;
 
+// Step 1: init
+	// outcomes
+	// funding 
+// Step 2: Generate inventory 
+	// outcomesToInventory
+	// invariant
+	// outcomesToOddsEstimate
+// Step 3: Purchase shares
+// Step 4: Resolute market
+	// profitMarketMaker 
+	// prof
+	
+
 // Set initial state $1 == 1 share in each outcome
 let outcomesToInventory = [];
 for (var i = 0; i < outcomes; i++) {
